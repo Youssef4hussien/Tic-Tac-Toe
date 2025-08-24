@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(4, 90px);
+    gap: 18px;
+    background: rgba(255,255,255,0.8);
+    padding: 30px 30px 10px 30px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(60,60,60,0.15);
+    margin-top: 60px;
+}
+
+.title {
+    grid-column: 1 / span 3;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #43c6ac;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 8px #fff;
+    padding-bottom: 10px;
+}
+
+.square {
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-size: 2.5rem;
+    color: #43c6ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, color 0.2s;
+    border: 2px solid #43c6ac;
+}
+
+.square:hover {
+    background: #f8ffae;
+    color: #333;
+    transform: scale(1.08);
+    border-color: #f8ffae;
+}
+
+@media (max-width: 600px) {
+    .game {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(4, 60px);
+        padding: 15px 10px 5px 10px;
+    }
+    .square {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .title {
+        font-size: 1.3rem;
+    }
+}
